@@ -2,7 +2,7 @@
 
 namespace Cadastro.Domain.Contratos
 {
-    interface IUsuarioRepository : IBaseRepository<Usuario>
+    public interface IUsuarioRepository : IBaseRepository<Usuario>
     {
     }
 }
