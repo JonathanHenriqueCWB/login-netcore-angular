@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v2.2": {
       "Cadastro.Repository/1.0.0": {
+        "dependencies": {
+          "Cadastro.Domain": "1.0.0"
+        },
         "runtime": {
           "Cadastro.Repository.dll": {}
+        }
+      },
+      "Cadastro.Domain/1.0.0": {
+        "runtime": {
+          "Cadastro.Domain.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Cadastro.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Cadastro.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
