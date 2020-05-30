@@ -1,0 +1,7 @@
+C:\Users\Jony\source\repos\Cadastro\Cadastro.Repository\bin\Debug\netcoreapp2.2\Cadastro.Repository.deps.json
+C:\Users\Jony\source\repos\Cadastro\Cadastro.Repository\bin\Debug\netcoreapp2.2\Cadastro.Repository.dll
+C:\Users\Jony\source\repos\Cadastro\Cadastro.Repository\bin\Debug\netcoreapp2.2\Cadastro.Repository.pdb
+C:\Users\Jony\source\repos\Cadastro\Cadastro.Repository\obj\Debug\netcoreapp2.2\Cadastro.Repository.AssemblyInfoInputs.cache
+C:\Users\Jony\source\repos\Cadastro\Cadastro.Repository\obj\Debug\netcoreapp2.2\Cadastro.Repository.AssemblyInfo.cs
+C:\Users\Jony\source\repos\Cadastro\Cadastro.Repository\obj\Debug\netcoreapp2.2\Cadastro.Repository.dll
+C:\Users\Jony\source\repos\Cadastro\Cadastro.Repository\obj\Debug\netcoreapp2.2\Cadastro.Repository.pdb
