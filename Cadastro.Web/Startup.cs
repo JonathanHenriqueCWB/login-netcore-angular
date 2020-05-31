@@ -1,4 +1,6 @@
+using Cadastro.Domain.Contratos;
 using Cadastro.Repository.Data;
+using Cadastro.Repository.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -26,6 +28,9 @@ namespace Cadastro.Web
             services.AddDbContext<Context>(option => option
             .UseMySql(Configuration.GetConnectionString("MySqlConnection")
             , m => m.MigrationsAssembly("Cadastro.Repository")));
+
+            //DI
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

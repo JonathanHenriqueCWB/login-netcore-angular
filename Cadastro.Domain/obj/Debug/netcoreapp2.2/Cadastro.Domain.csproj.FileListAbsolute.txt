@@ -5,3 +5,4 @@ C:\Users\Jony\source\repos\Cadastro\Cadastro.Domain\obj\Debug\netcoreapp2.2\Cada
 C:\Users\Jony\source\repos\Cadastro\Cadastro.Domain\obj\Debug\netcoreapp2.2\Cadastro.Domain.AssemblyInfo.cs
 C:\Users\Jony\source\repos\Cadastro\Cadastro.Domain\obj\Debug\netcoreapp2.2\Cadastro.Domain.dll
 C:\Users\Jony\source\repos\Cadastro\Cadastro.Domain\obj\Debug\netcoreapp2.2\Cadastro.Domain.pdb
+C:\Users\Jony\source\repos\Cadastro\Cadastro.Domain\obj\Debug\netcoreapp2.2\Cadastro.Domain.csprojAssemblyReference.cache

@@ -2,25 +2,27 @@
 using Cadastro.Repository.Data;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Cadastro.Repository.Repository
 {
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {
-        private readonly Context _context;
-        public BaseRepository()
+        protected readonly Context Context;
+        public BaseRepository(Context context)
         {
-
+            Context = context;
         }
 
         public IEnumerable<TEntity> Listar()
         {
-            throw new NotImplementedException();
+            return Context.Set<TEntity>().ToList();
         }
 
         public void Cadastrar(TEntity entity)
         {
-            throw new NotImplementedException();
+            Context.Set<TEntity>().Add(entity);
+            Context.SaveChanges();
         }
 
         public void Atualizar(TEntity entity)
