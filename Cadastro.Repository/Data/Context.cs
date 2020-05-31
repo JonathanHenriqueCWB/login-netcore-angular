@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Cadastro.Repository.Data
 {
-    class Context : DbContext
+    public class Context : DbContext
     {
         public DbSet<Usuario> Usuarios { get; set; }
 

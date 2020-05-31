@@ -1,4 +1,5 @@
 ﻿using Cadastro.Domain.Contratos;
+using Cadastro.Repository.Data;
 using System;
 using System.Collections.Generic;
 
@@ -6,6 +7,12 @@ namespace Cadastro.Repository.Repository
 {
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {
+        private readonly Context _context;
+        public BaseRepository()
+        {
+
+        }
+
         public IEnumerable<TEntity> Listar()
         {
             throw new NotImplementedException();
