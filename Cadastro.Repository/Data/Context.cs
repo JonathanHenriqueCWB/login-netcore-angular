@@ -1,4 +1,5 @@
 ﻿using Cadastro.Domain.Entidades;
+using Cadastro.Repository.Config;
 using Microsoft.EntityFrameworkCore;
 
 namespace Cadastro.Repository.Data
@@ -9,6 +10,12 @@ namespace Cadastro.Repository.Data
 
         public Context(DbContextOptions options) : base(options)
         {
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new UsuarioConfiguration());
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
