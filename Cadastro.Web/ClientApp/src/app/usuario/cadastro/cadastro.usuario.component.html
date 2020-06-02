@@ -1,0 +1,35 @@
+<h2 class="titulo">Cadastro de novo usuario</h2>
+
+<form>
+  <div class="form-group">
+    <label for="inputNome">Nome</label>
+    <input type="text" name="nome" id="inputNome" placeholder="Nome" required
+           class="form-control"
+           #nome="ngModel" [(ngModel)]="usuario.nome" />
+  </div>
+
+  <div class="form-group">
+    <label for="inputSobrenome">Sobrenome</label>
+    <input type="text" name="sobrenome" id="inputSobrenome" placeholder="Sobrenome" required
+           class="form-control"
+           #sobrenome="ngModel" [(ngModel)]="usuario.sobrenome"/>
+  </div>
+  
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail">Email</label>
+      <input type="email" name="email" id="inputEmail" placeholder="Email" required email
+             class="form-control"
+             #email="ngModel" [(ngModel)]="usuario.email"/>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="inputPassword">Password</label>
+      <input type="password" name="senha" id="inputPassword" placeholder="Senha" required
+             class="form-control"
+             #senha="ngModel" [(ngModel)]="usuario.senha"/>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="!ativarBtnEnviar()" (click)="cadastrar()">Sign in</button>
+</form>
