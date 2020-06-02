@@ -4,21 +4,39 @@
 
 <form>
   <div class="form-group">
-    <label for="email">Email address</label>
-    <input type="email" name="inputEmail" id="email"
+    <label for="inputEmail">Email address</label>
+    <input type="email" name="email" id="inputEmail" required email
            class="form-control"
-           #email="ngModel" [(ngModel)]="usuario.email"
-           />
+           #email="ngModel" [(ngModel)]="usuario.email" [ngClass]="{
+              'is-invalid': email.invalid && (email.dirty || email.touched),
+              'is-valid': email.valid && (email.dirty || email.touched)}" />
+    <!--erro-->
+    <div class="invalid-feedback mb-2" *ngIf="email.invalid && (email.dirty || email.touched)">
+      <div *ngIf="email.errors.required">
+        Campo email obrigatório!
+      </div>
+      <div *ngIf="email.errors.email">
+        Email invalido!
+      </div>
+    </div>
   </div>
 
   <div class="form-group">
     <label for="senha">Password</label>
     <input type="password" id="senha" name="inputSenha" required
            class="form-control"
-           #senha="ngModel" [(ngModel)]="usuario.senha"
-           />
+           #senha="ngModel" [(ngModel)]="usuario.senha" [ngClass]="{
+              'is-invalid': senha.invalid && (senha.dirty || senha.touched),
+              'is-valid': senha.valid && (senha.dirty || senha.touched)}" />
+    <!--erro-->
+    <div class="invalid-feedback mb-2" *ngIf="email.invalid && (email.dirty || email.touched)">
+      <div *ngIf="email.errors.required">
+        Campo email obrigatório!
+      </div>
+    </div>
   </div>
-  <button type="submit" class="btn btn-primary btn-block" (click)="logar()">Submit</button>
+
+  <button type="submit" class="btn btn-primary btn-block" (click)="logar()" [disabled]="!ativarBtnEnviar()">Submit</button>
 </form>
 
 <a [routerLink]='["/"]'>Voltar</a>

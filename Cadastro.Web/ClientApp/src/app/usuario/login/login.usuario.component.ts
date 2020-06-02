@@ -14,6 +14,10 @@ export class LoginUsuarioComponente implements OnInit {
     this.usuario = new Usuario();
   }
 
+  public ativarBtnEnviar(): boolean {
+    return  this.usuario.email != null && this.usuario.email != "" && this.usuario.senha != null && this.usuario.senha != "";
+  }
+
   public logar() {
     console.log(this.usuario.nome, this.usuario.sobrenome, this.usuario.email, this.usuario.senha);
   }
