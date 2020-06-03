@@ -12,6 +12,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { LoginUsuarioComponente } from './usuario/login/login.usuario.component';
 import { CadastroUsuarioComponent } from './usuario/cadastro/cadastro.usuario.component';
 import { UsuarioService } from './services/usuario.service';
+import { ProdutoComponent } from './produto/produto.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UsuarioService } from './services/usuario.service';
     CounterComponent,
     FetchDataComponent,
     LoginUsuarioComponente,
-    CadastroUsuarioComponent
+    CadastroUsuarioComponent,
+    ProdutoComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -33,6 +35,7 @@ import { UsuarioService } from './services/usuario.service';
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'usuario-login', component: LoginUsuarioComponente },
       { path: 'usuario-cadastrar', component: CadastroUsuarioComponent },
+      { path: 'produto', component: ProdutoComponent },
     ])
   ],
   providers: [UsuarioService],
