@@ -13,6 +13,7 @@ import { LoginUsuarioComponente } from './usuario/login/login.usuario.component'
 import { CadastroUsuarioComponent } from './usuario/cadastro/cadastro.usuario.component';
 import { UsuarioService } from './services/usuario.service';
 import { ProdutoComponent } from './produto/produto.component';
+import { GuardaRotas } from './Authorization/guarda.rotas';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { ProdutoComponent } from './produto/produto.component';
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'usuario-login', component: LoginUsuarioComponente },
       { path: 'usuario-cadastrar', component: CadastroUsuarioComponent },
-      { path: 'produto', component: ProdutoComponent },
+      { path: 'produto', component: ProdutoComponent, canActivate: [GuardaRotas] },
     ])
   ],
   providers: [UsuarioService],
